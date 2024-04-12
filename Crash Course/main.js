@@ -28,3 +28,52 @@ console.log(Array.isArray(fruits)); //checks whether the passed value is an arra
 console.log(Array.isArray("hello")); //false
 console.log(fruits.indexOf("oranges"));
 console.log(fruits);
+
+// OBJECT LITERALS
+const person = {
+  firstName: "John",
+  lastname: "Doe",
+  age: 30,
+  hobbies: ["music", "movies", "sports"],
+  address: {
+    street: "50 Main st",
+    city: "Boston",
+    state: "MA",
+  },
+};
+
+console.log(person.firstName, person.lastname);
+console.log(person.hobbies[1]);
+console.log(person.address.city);
+person.email = "jdoe@gmail.com";
+console.log(person);
+
+// const {
+//   firstName,
+//   lastname,
+//   address: { city },
+// } = person;
+// console.log(city);
+
+const todos = [
+  {
+    id: 1,
+    text: "Take out trash",
+    isComplete: false,
+  },
+  {
+    id: 2,
+    text: "Meeting with boss",
+    isComplete: false,
+  },
+  {
+    id: 3,
+    text: "Dentist appt",
+    isComplete: true,
+  },
+];
+
+console.log(todos);
+console.log(todos[1].text);
+const todoJSON = JSON.stringify(todos); //JSON - data format
+console.log(todoJSON);
