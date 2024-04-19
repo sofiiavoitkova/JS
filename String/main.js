@@ -8,3 +8,14 @@ function ucFirst(str) {
 }
 
 console.log(ucFirst("вася"));
+
+//Task2
+function checkSpam(str) {
+  if (typeof str != "string") throw Error("Not a string");
+  return str.toLowerCase().includes("via") || str.toLowerCase().includes("xxx");
+}
+
+console.log(checkSpam("buy ViA now"));
+console.log(checkSpam("eee xxxxx"));
+console.log(checkSpam("innocent rabbit"));
+console.log(checkSpam(33));
