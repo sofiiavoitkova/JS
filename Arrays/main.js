@@ -23,3 +23,37 @@ console.log(styles);
 
 styles.unshift("Рэп", "Регги");
 console.log(styles);
+
+//Task3
+let arr = ["a", "b"];
+
+arr.push(function () {
+  alert(this);
+});
+
+// arr[2]();
+// a,b,function () {
+//     alert(this);
+//   };
+
+//Task4
+function sumInput() {
+  let numbers = [];
+  let num;
+
+  do {
+    num = +prompt("Please enter the number: ", "");
+    if (!isFinite(num)) {
+      break;
+    }
+    numbers.push(num);
+  } while (true);
+
+  let sum = 0;
+  for (let i of numbers) {
+    sum += i;
+  }
+  return sum;
+}
+
+console.log(sumInput());
