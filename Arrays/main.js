@@ -42,11 +42,11 @@ function sumInput() {
   let num;
 
   do {
-    num = +prompt("Please enter the number: ", "");
-    if (!isFinite(num)) {
+    num = prompt("Please enter the number: ", "");
+    if (num === "" || num === null || !isFinite(num)) {
       break;
     }
-    numbers.push(num);
+    numbers.push(+num);
   } while (true);
 
   let sum = 0;
