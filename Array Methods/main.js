@@ -41,9 +41,9 @@ alert(arr);
 
 //the 2nd way
 function filterRange(arr, a, b) {
-  var filteredArry = [];
+  let filteredArry = [];
 
-  for (var i = 0; i < arr.length; i++) {
+  for (let i = 0; i < arr.length; i++) {
     if (arr[i] >= a && arr[i] <= b) {
       filteredArry.push(arr[i]);
     }
