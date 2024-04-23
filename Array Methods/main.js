@@ -75,3 +75,10 @@ let arr = [5, 3, 8, 1];
 filterRangeInPlace(arr, 1, 4);
 
 alert(arr); // [3, 1]
+
+//Task4
+let arr = [5, 2, 1, -10, 8];
+
+arr.sort((a, b) => b - a);
+
+alert(arr);
