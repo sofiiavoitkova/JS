@@ -194,3 +194,30 @@ function shuffle(array) {
     [array[i], array[j]] = [array[j], array[i]];
   }
 }
+
+//Task11
+//the 1st way
+function getAverageAge(users) {
+  let totalAge = 0;
+
+  for (let i = 0; i < users.length; i++) {
+    totalAge += users[i].age;
+  }
+
+  let averageAge = totalAge / users.length;
+
+  return averageAge;
+}
+
+let vasya = { name: "Вася", age: 25 };
+let petya = { name: "Петя", age: 30 };
+let masha = { name: "Маша", age: 29 };
+
+let arr = [vasya, petya, masha];
+
+alert(getAverageAge(arr));
+
+//the 2nd way
+function getAverageAge(users) {
+  return users.reduce((prev, user) => prev + user.age, 0) / users.length;
+}
