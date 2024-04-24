@@ -221,3 +221,31 @@ alert(getAverageAge(arr));
 function getAverageAge(users) {
   return users.reduce((prev, user) => prev + user.age, 0) / users.length;
 }
+
+//Task12
+function unique(arr) {
+  let result = [];
+
+  for (let i = 0; i < arr.length; i++) {
+    let current = arr[i];
+    if (!result.includes(current)) {
+      result.push(current);
+    }
+  }
+
+  return result;
+}
+
+let strings = [
+  "кришна",
+  "кришна",
+  "харе",
+  "харе",
+  "харе",
+  "харе",
+  "кришна",
+  "кришна",
+  ":-O",
+];
+
+console.log(unique(strings));
