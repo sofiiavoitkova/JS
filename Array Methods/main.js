@@ -149,3 +149,14 @@ sortByAge(arr);
 alert(arr[0].name); // Вася
 alert(arr[1].name); // Маша
 alert(arr[2].name); // Петя
+
+//Task10
+function shuffle(array) {
+  array.sort(function () {
+    return Math.random() - 0.5;
+  });
+}
+
+let arr = [1, 2, 3];
+shuffle(arr);
+alert(arr);
