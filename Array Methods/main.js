@@ -151,6 +151,7 @@ alert(arr[1].name); // Маша
 alert(arr[2].name); // Петя
 
 //Task10
+//the 1st way
 function shuffle(array) {
   array.sort(function () {
     return Math.random() - 0.5;
@@ -160,3 +161,36 @@ function shuffle(array) {
 let arr = [1, 2, 3];
 shuffle(arr);
 alert(arr);
+
+//the 2nd way
+function shuffle(array) {
+  array.sort(() => Math.random() - 0.5);
+}
+
+let count = {
+  123: 0,
+  132: 0,
+  213: 0,
+  231: 0,
+  321: 0,
+  312: 0,
+};
+
+for (let i = 0; i < 1000000; i++) {
+  let array = [1, 2, 3];
+  shuffle(array);
+  count[array.join("")]++;
+}
+
+for (let key in count) {
+  alert(`${key}: ${count[key]}`);
+}
+
+//the 3rd way (Fisher–Yates shuffle)
+function shuffle(array) {
+  for (let i = array.length - 1; i > 0; i--) {
+    let j = Math.floor(Math.random() * (i + 1));
+
+    [array[i], array[j]] = [array[j], array[i]];
+  }
+}
