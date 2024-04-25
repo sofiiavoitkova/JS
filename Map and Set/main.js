@@ -50,3 +50,14 @@ function aclean(arr) {
 let arr = ["nap", "teachers", "cheaters", "PAN", "ear", "era", "hectares"];
 
 alert(aclean(arr));
+
+//Task3
+let map = new Map();
+
+map.set("name", "John");
+
+let keys = Array.from(map.keys());
+
+keys.push("more");
+
+alert(keys);
