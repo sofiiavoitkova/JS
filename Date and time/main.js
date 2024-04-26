@@ -36,3 +36,14 @@ function getLastDayOfMonth(year, month) {
 }
 
 alert(getLastDayOfMonth(2012, 1)); // 29
+
+//Task6
+function getSecondsToday() {
+  let now = new Date();
+  let today = new Date(now.getFullYear(), now.getMonth(), now.getDate());
+
+  let diff = now - today; // milliseconds
+  return Math.round(diff / 1000); // seconds
+}
+
+console.leg(getSecondsToday());
