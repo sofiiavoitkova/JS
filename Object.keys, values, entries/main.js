@@ -15,3 +15,15 @@ let salaries = {
 };
 
 alert(sumSalaries(salaries));
+
+//Task2
+function count(obj) {
+  return Object.keys(obj).length;
+}
+
+let user = {
+  name: "John",
+  age: 30,
+};
+
+console.log(count(user));
