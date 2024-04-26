@@ -28,3 +28,11 @@ let date = new Date(2015, 0, 2);
 console.log(getDateAgo(date, 1)); // 1
 console.log(getDateAgo(date, 2)); // 31
 console.log(getDateAgo(date, 365)); // 2
+
+//Task5
+function getLastDayOfMonth(year, month) {
+  let date = new Date(year, month + 1, 0);
+  return date.getDate();
+}
+
+alert(getLastDayOfMonth(2012, 1)); // 29
