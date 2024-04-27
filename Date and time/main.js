@@ -54,3 +54,26 @@ function getSecondsToday() {
   let d = new Date();
   return d.getHours() * 3600 + d.getMinutes() * 60 + d.getSeconds();
 }
+
+//Task7
+//the 1st way
+function getSecondsToTomorrow() {
+  let now = new Date();
+
+  let tomorrow = new Date(now.getFullYear(), now.getMonth(), now.getDate() + 1);
+
+  let diff = tomorrow - now;
+  return Math.round(diff / 1000);
+}
+
+//the 2nd way
+function getSecondsToTomorrow() {
+  let now = new Date();
+  let hour = now.getHours();
+  let minutes = now.getMinutes();
+  let seconds = now.getSeconds();
+  let totalSecondsToday = (hour * 60 + minutes) * 60 + seconds;
+  let totalSecondsInADay = 86400;
+
+  return totalSecondsInADay - totalSecondsToday;
+}
