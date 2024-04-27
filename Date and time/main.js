@@ -77,3 +77,32 @@ function getSecondsToTomorrow() {
 
   return totalSecondsInADay - totalSecondsToday;
 }
+
+//Task8
+function formatDate(date) {
+  let diff = new Date() - date;
+
+  switch (true) {
+    case diff < 1000:
+      return "прямо сейчас";
+    case diff < 60000:
+      return Math.floor(diff / 1000) + " сек. назад";
+    case diff < 3600000:
+      return Math.floor(diff / 60000) + " мин. назад";
+    default:
+      let d = date;
+      d = [
+        "0" + d.getDate(),
+        "0" + (d.getMonth() + 1),
+        "" + d.getFullYear(),
+        "0" + d.getHours(),
+        "0" + d.getMinutes(),
+      ].map((component) => component.slice(-2)); // to two-digit format
+      return d.slice(0, 3).join(".") + " " + d.slice(3).join(":");
+  }
+}
+
+alert(formatDate(new Date(new Date() - 1)));
+alert(formatDate(new Date(new Date() - 30 * 1000)));
+alert(formatDate(new Date(new Date() - 5 * 60 * 1000)));
+alert(formatDate(new Date(new Date() - 86400 * 1000)));
