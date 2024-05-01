@@ -5,9 +5,9 @@
  * @param {*} arr - The variable to check.
  * @returns {boolean} Returns true for an array, otherwise false. 
  */
-function isArray(arr) {
-  return Array.isArray(arr);
+function is_array(arr) {
+  return Array.is_array(arr);
 }
 
-console.log(isArray("js test"));
-console.log(isArray([1, 2, 4, 0]));
+console.log(is_array("js test"));
+console.log(is_array([1, 2, 4, 0]));
