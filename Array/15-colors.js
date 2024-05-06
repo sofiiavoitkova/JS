@@ -6,8 +6,6 @@ _* o = ["th","st","nd","rd"];
                     "2nd choice is Green."
                     "3rd choice is Red."
                     - - - - - - - - - - - - -
- * @param {Array} arr - The input array
- * @returns {Array} - The array with duplicate items removed
  */
 const color = [
   "Blue ",
