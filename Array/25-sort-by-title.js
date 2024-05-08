@@ -13,8 +13,8 @@
                     libraryID: 4264,
                     title: "Walter Isaacson"
                     }]
- * @param {Array} array - The input array
- * @returns {Array} - An array without falsy values
+ * @param {Array} array - The array of objects
+ * @returns {Array} - The sorted array of objects
  */
 var library = [
   { author: "Bill Gates", title: "The Road Ahead", libraryID: 1254 },
