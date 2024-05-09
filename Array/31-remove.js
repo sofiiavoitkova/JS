@@ -5,6 +5,7 @@
  * @param {number} n - The element to remove
  * @returns {Array} - An array without a specific element
  */
+//the 1st way
 function remove_array_element(arr, n) {
   let arr1 = [];
   for (let i = 0; i < arr.length; i++) {
@@ -13,5 +14,11 @@ function remove_array_element(arr, n) {
     }
   }
   return arr1;
+}
+console.log(remove_array_element([2, 5, 9, 6], 5));
+
+//the 2nd way
+function remove_array_element(arr, n) {
+  return arr.filter((element) => element !== n);
 }
 console.log(remove_array_element([2, 5, 9, 6], 5));
