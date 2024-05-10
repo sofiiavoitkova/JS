@@ -26,3 +26,7 @@ console.log(contains(arr, 5));
 function contains(arr, n) {
   return arr.includes(n);
 }
+
+arr = [2, 5, 9, 6];
+
+console.log(contains(arr, 5));
