@@ -5,11 +5,12 @@
  * @param {number} n - The element to search for
  * @returns {boolean} - True if the element is found, otherwise false
  */
-arr = [2, 5, 9, 6];
+let arr = [2, 5, 9, 6];
 
-arrCopy = arr.slice();
+let arrCopy = arr.slice();
 
 arrCopy.length = 0;
+//arrCopy.splice(0, arrCopy.length);
 
 console.log(arrCopy);
 console.log(arr);
