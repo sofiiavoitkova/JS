@@ -6,9 +6,9 @@
  * @returns {boolean} - True if the element is found, otherwise false
  */
 //the 1st way
-function contains(arr, n) {
-  let arr1 = [];
+let arr = [2, 5, 9, 6];
 
+function contains(arr, n) {
   for (let i = 0; i < arr.length; i++) {
     if (arr[i] === n) {
       return true;
@@ -18,15 +18,13 @@ function contains(arr, n) {
   return false;
 }
 
-arr = [2, 5, 9, 6];
-
 console.log(contains(arr, 5));
 
 //the 2nd way
+let arr = [2, 5, 9, 6];
+
 function contains(arr, n) {
   return arr.includes(n);
 }
-
-arr = [2, 5, 9, 6];
 
 console.log(contains(arr, 5));
