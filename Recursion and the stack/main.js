@@ -6,9 +6,8 @@
  * 2. Using a recursion, cause sumTo(n) = n + sumTo(n-1) for n > 1.
  * 3. Using the arithmetic progression formula.
  * Expected Result: 5050
- * @param {Array} arr - The unsorted array
- * @param {number} n - The position of the nth largest element
- * @returns {number} - The nth largest element
+ * @param {number} n - The number up to which the sum should be calculated.
+ * @returns {number} - The sum of numbers from 1 to n.
  */
 //The 1st solution
 function sumTo(n) {
@@ -40,3 +39,23 @@ function sumTo(n) {
 }
 
 alert(sumTo(100));
+
+//Task2
+/**
+ * Task description: Calculate factorial
+ * The factorial of a natural number is a number multiplied by "number minus one",
+ * then by "number minus two", and so on till 1. The factorial of n is denoted as n!
+ * Write a function factorial(n) that calculates n! using recursive calls.
+ * Expected Result: 120
+ * @param {number} n - The number for which to calculate the factorial
+ * @returns {number} - The factorial of n
+ */
+function factorial(n) {
+  if (n == 0 || n == 1) {
+    return 1;
+  } else {
+    return n * factorial(n - 1);
+  }
+}
+
+alert(factorial(5));
