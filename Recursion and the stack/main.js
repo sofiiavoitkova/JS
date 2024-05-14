@@ -91,9 +91,10 @@ alert(fib(77));
 //Task4
 /**
  * Task description: Write a function printList(list) that outputs list items one-by-one.
- * Expected Result: 2
- *                  13
- *                  5527939700884757
+ * Expected Result: 1
+ *                  2
+ *                  3
+ *                  4
  * @param {Object} list - The linked list to print
  */
 
