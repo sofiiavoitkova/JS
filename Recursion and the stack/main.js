@@ -87,3 +87,37 @@ function fib(n) {
 alert(fib(3));
 alert(fib(7));
 alert(fib(77));
+
+//Task4
+/**
+ * Task description: Write a function printList(list) that outputs list items one-by-one.
+ * Expected Result: 2
+ *                  13
+ *                  5527939700884757
+ * @param {Object} list - The linked list to print
+ */
+
+let list = {
+  value: 1,
+  next: {
+    value: 2,
+    next: {
+      value: 3,
+      next: {
+        value: 4,
+        next: null,
+      },
+    },
+  },
+};
+
+function printList(list) {
+  let tmp = list;
+
+  while (tmp) {
+    console.log(tmp.value);
+    tmp = tmp.next;
+  }
+}
+
+printList(list);
