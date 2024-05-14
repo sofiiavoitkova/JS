@@ -148,3 +148,71 @@ function printList(list) {
 }
 
 printList(list);
+
+//Task5
+/**
+ * Task description: Output a single-linked list from the previous task in the reverse order.
+ * Expected Result: 4
+ *                  3
+ *                  2
+ *                  1
+ * @param {Object} list - The linked list to print
+ */
+
+//The 1st solution
+let list = {
+  value: 1,
+  next: {
+    value: 2,
+    next: {
+      value: 3,
+      next: {
+        value: 4,
+        next: null,
+      },
+    },
+  },
+};
+
+function Reverse(list) {
+  let arr = [];
+  let tmp = list;
+
+  while (tmp) {
+    arr.push(tmp.value);
+    tmp = tmp.next;
+  }
+
+  arr.reverse();
+
+  for (let i = 0; i < arr.length; i++) {
+    console.log(arr[i]);
+  }
+}
+
+Reverse(list);
+
+//The 2nd solution
+let list = {
+  value: 1,
+  next: {
+    value: 2,
+    next: {
+      value: 3,
+      next: {
+        value: 4,
+        next: null,
+      },
+    },
+  },
+};
+
+function Reverse(list) {
+  if (list.next) {
+    Reverse(list.next);
+  }
+
+  console.log(list.value);
+}
+
+Reverse(list);
