@@ -59,3 +59,31 @@ function factorial(n) {
 }
 
 alert(factorial(5));
+
+//Task3
+/**
+ * Task description: Write a function fib(n) that returns the n-th Fibonacci number.
+ * Expected Result: 2
+ *                  13
+ *                  5527939700884757
+ * @param {number} n - The position of the Fibonacci number to calculate
+ * @returns {number} - The Fibonacci number at position n
+ */
+
+function fib(n) {
+  let prev = 1;
+  let prevPrev = 1;
+  let result = 0;
+
+  for (let i = 3; i <= n; i++) {
+    result = prev + prevPrev;
+    prevPrev = prev;
+    prev = result;
+  }
+
+  return result;
+}
+
+alert(fib(3));
+alert(fib(7));
+alert(fib(77));
