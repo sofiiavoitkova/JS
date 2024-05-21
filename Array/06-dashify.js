@@ -1,6 +1,6 @@
 /**
  * Task description: Write a JavaScript program that accepts a number as input and inserts dashes (-) between
-each even number.
+ * each even number.
  * Sample number: 025468
  * Expected Result: 0-254-6-8
  */
@@ -21,5 +21,6 @@ if (!isFinite(num)) {
       result += input[i];
     }
   }
+
   console.log(result);
 }
