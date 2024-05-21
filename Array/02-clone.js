@@ -5,9 +5,9 @@
  * @param {Array} arr - The array to clone
  * @returns {Array}
  */
-function array_Clone(arr) {
+function cloneArray(arr) {
   return arr.slice();
 }
 
-console.log(array_Clone([1, 2, 4, 0]));
-console.log(array_Clone([1, 2, [4, 0]]));
+console.log(cloneArray([1, 2, 4, 0]));
+console.log(cloneArray([1, 2, [4, 0]]));
