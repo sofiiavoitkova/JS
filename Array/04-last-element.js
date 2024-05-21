@@ -8,7 +8,7 @@ return the last 'n' elements of the array.
  * @param {number} n - The number of elements to return
  * @returns {Array} The last 'n' elements of the array
  */
-function last(arr, n) {
+function getLastElement(arr, n) {
   if (n === undefined) {
     return arr.slice(-1)[0];
   }
@@ -20,6 +20,6 @@ function last(arr, n) {
   return arr.slice(-n);
 }
 
-console.log(last([7, 9, 0, -2]));
-console.log(last([7, 9, 0, -2], 3));
-console.log(last([7, 9, 0, -2], 6));
+console.log(getLastElement([7, 9, 0, -2]));
+console.log(getLastElement([7, 9, 0, -2], 3));
+console.log(getLastElement([7, 9, 0, -2], 6));
