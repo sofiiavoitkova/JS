@@ -6,6 +6,9 @@
  * @param {Array} array2 - The second array with individual values
  * @returns {Array} - The array with the sum of each individual index value
  */
+let array1 = [1, 0, 2, 3, 4];
+let array2 = [3, 5, 6, 7, 8, 13];
+
 function sum(array1, array2) {
   let result = [];
 
@@ -34,8 +37,5 @@ function sum(array1, array2) {
 
   return result;
 }
-
-let array1 = [1, 0, 2, 3, 4];
-let array2 = [3, 5, 6, 7, 8, 13];
 
 console.log(sum(array1, array2));
