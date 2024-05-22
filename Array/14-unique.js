@@ -5,14 +5,16 @@
  * @param {Array} arr - The input array
  * @returns {Array} - The array with duplicate items removed
  */
+let arr = ["banana", "Banana", "orange", "Orange"];
+
 let lowerCase = [];
-function unique(arr) {
+
+function removeDuplicate(arr) {
   for (let i = 0; i < arr.length; i++) {
     lowerCase.push(arr[i].toLowerCase());
   }
+
   return Array.from(new Set(lowerCase));
 }
 
-let arr = ["banana", "Banana", "orange", "Orange"];
-
-console.log(unique(arr));
+console.log(removeDuplicate(arr));
