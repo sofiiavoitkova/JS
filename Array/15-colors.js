@@ -16,6 +16,7 @@ const color = [
   "Indigo",
   "Yellow ",
 ];
+
 const o = ["th", "st", "nd", "rd"];
 
 for (let i = 0; i < color.length; i++) {
@@ -29,5 +30,6 @@ for (let i = 0; i < color.length; i++) {
   } else {
     position = i + 1 + o[0];
   }
+
   console.log(position + " choice is " + color[i] + ".");
 }
