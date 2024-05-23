@@ -4,7 +4,7 @@
  * @param {Array} arr - The input array of strings
  * @returns {string} - The longest common starting substring
  */
-function longest_common_starting_substring(arr) {
+function findCommonSubstring(arr) {
   if (arr.length === 0) return "";
 
   let common = "";
@@ -17,7 +17,8 @@ function longest_common_starting_substring(arr) {
     }
     common += arr[0][i];
   }
+
   return common;
 }
 
-console.log(longest_common_starting_substring(["gooo", "google", "goooogle"]));
+console.log(findCommonSubstring(["gooo", "google", "goooogle"]));
