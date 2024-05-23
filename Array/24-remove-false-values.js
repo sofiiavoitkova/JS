@@ -6,15 +6,17 @@
  */
 
 //the 1st way
+arr = [NaN, 0, 15, false, -22, "", undefined, 47, null];
+
 function remove(array) {
   return array.filter(Boolean);
 }
 
-arr = [NaN, 0, 15, false, -22, "", undefined, 47, null];
-
 console.log(remove(arr));
 
 //the 2nd way
+arr = [NaN, 0, 15, false, -22, "", undefined, 47, null];
+
 let result = [];
 
 function remove(array) {
@@ -26,7 +28,5 @@ function remove(array) {
 
   return result;
 }
-
-arr = [NaN, 0, 15, false, -22, "", undefined, 47, null];
 
 console.log(remove(arr));
