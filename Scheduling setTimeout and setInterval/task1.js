@@ -4,6 +4,8 @@
  * @param {number} from - The starting number of the sequence
  * @param {number} to - The ending number of the sequence
  */
+
+//the 1st solution
 function printNumbers(from, to) {
   let currentNum = from;
 
@@ -12,6 +14,23 @@ function printNumbers(from, to) {
 
     if (currentNum == to) {
       clearInterval(timerId);
+    }
+
+    currentNum++;
+  }, 1000);
+}
+
+printNumbers(1, 10);
+
+//the 2nd solution
+function printNumbers(from, to) {
+  let currentNum = from;
+
+  setTimeout(function go() {
+    console.log(currentNum);
+
+    if (currentNum < to) {
+      setTimeout(go, 1000);
     }
 
     currentNum++;
