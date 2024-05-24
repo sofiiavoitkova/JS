@@ -21,10 +21,10 @@ function contains(arr, n) {
 console.log(contains(arr, 5));
 
 //the 2nd way
-let arr = [2, 5, 9, 6];
+let arr1 = [2, 5, 9, 6];
 
 function contains(arr, n) {
-  return arr.includes(n);
+  return arr1.includes(n);
 }
 
-console.log(contains(arr, 5));
+console.log(contains(arr1, 5));
