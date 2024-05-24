@@ -6,19 +6,21 @@
  * @returns {Array} - An array without a specific element
  */
 //the 1st way
-function remove_array_element(arr, n) {
+function removeElement(arr, n) {
   let arr1 = [];
+
   for (let i = 0; i < arr.length; i++) {
     if (arr[i] !== n) {
       arr1.push(arr[i]);
     }
   }
+
   return arr1;
 }
-console.log(remove_array_element([2, 5, 9, 6], 5));
+console.log(removeElement([2, 5, 9, 6], 5));
 
 //the 2nd way
-function remove_array_element(arr, n) {
+function removeElement(arr, n) {
   return arr.filter((element) => element !== n);
 }
-console.log(remove_array_element([2, 5, 9, 6], 5));
+console.log(removeElement([2, 5, 9, 6], 5));
