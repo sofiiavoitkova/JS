@@ -6,7 +6,7 @@
  * @param {number} n - The value to pre-fill the array with
  * @returns {Array} - The array filled with the specified string value
  */
-function array_filled(l, w) {
+function FillArray(l, w) {
   let arr = [];
 
   for (let i = 0; i < l; i++) {
@@ -16,5 +16,5 @@ function array_filled(l, w) {
   return arr;
 }
 
-console.log(array_filled(3, "default value"));
-console.log(array_filled(4, "password"));
+console.log(FillArray(3, "default value"));
+console.log(FillArray(4, "password"));
