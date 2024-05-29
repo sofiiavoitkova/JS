@@ -7,7 +7,7 @@
  * @param {number} n - The value to pre-fill the array with
  * @returns {Array} - The array filled with the specified value
  */
-function array_filled(l, n) {
+function FillArray(l, n) {
   let arr = [];
 
   for (let i = 0; i < l; i++) {
@@ -17,5 +17,5 @@ function array_filled(l, n) {
   return arr;
 }
 
-console.log(array_filled(6, 0));
-console.log(array_filled(4, 11));
+console.log(FillArray(6, 0));
+console.log(FillArray(4, 11));
