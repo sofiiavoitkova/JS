@@ -7,19 +7,19 @@
  */
 
 //the 1st solution (for generating 1 item)
-function RandomItem(arr) {
-  let i = Math.floor(Math.random() * arr.length);
+let myArray = [43, 56, 23, 89, 88, 90, 99, 652];
 
+function GetRandomItem(arr) {
+  let i = Math.floor(Math.random() * arr.length);
   return arr[i];
 }
 
-let myArray = [43, 56, 23, 89, 88, 90, 99, 652];
-console.log(RandomItem(myArray));
+console.log(GetRandomItem(myArray));
 
 //the 2nd solution (for generating multiple items)
 let arr = [43, 56, 23, 89, 88, 90, 99, 652];
 
-function RandomItem(arr, n) {
+function GetRandomItem(arr, n) {
   let randomItems = [];
 
   for (let i = 0; i < n; i++) {
@@ -30,4 +30,4 @@ function RandomItem(arr, n) {
   return randomItems;
 }
 
-console.log(RandomItem(arr, 2));
+console.log(GetRandomItem(arr, 2));
