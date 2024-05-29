@@ -5,10 +5,10 @@
  * @param {number} n - The position of the nth largest element
  * @returns {number} - The nth largest element
  */
-function nthLargest(arr, n) {
+function getLargest(arr, n) {
   arr.sort((a, b) => b - a);
 
   return arr[n - 1];
 }
 
-console.log(nthLargest([43, 56, 23, 89, 88, 90, 99, 652], 4));
+console.log(getLargest([43, 56, 23, 89, 88, 90, 99, 652], 4));
