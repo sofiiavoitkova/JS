@@ -7,7 +7,7 @@
  * @param {number} l - The length of the array to generate
  * @returns {Array} - The array of integer numbers
  */
-function array_range(s, l) {
+function generateArray(s, l) {
   let result = [];
 
   for (let i = 0; i < l; i++) {
@@ -17,5 +17,5 @@ function array_range(s, l) {
   return result;
 }
 
-console.log(array_range(1, 4));
-console.log(array_range(-6, 4));
+console.log(generateArray(1, 4));
+console.log(generateArray(-6, 4));
