@@ -4,11 +4,11 @@
  * @param {Array} arr - The input array
  * @returns {Array} - The filtered array
  */
-function filter_array_values(arr) {
+function filterArrayValues(arr) {
   return arr.filter(
     (element) =>
       element !== false && element !== null && element !== 0 && element !== ""
   );
 }
 
-console.log(filter_array_values([58, "", "abcd", true, null, false, 0]));
+console.log(filterArrayValues([58, "", "abcd", true, null, false, 0]));
