@@ -6,7 +6,7 @@
  * @param {number} l - The ending integer
  * @returns {Array} - The array containing numbers between two integers
  */
-function rangeBetwee(s, l) {
+function rangeBetween(s, l) {
   let result = [];
 
   for (let i = s; i <= l; i++) {
@@ -16,5 +16,5 @@ function rangeBetwee(s, l) {
   return result;
 }
 
-console.log(rangeBetwee(4, 7));
-console.log(rangeBetwee(-4, 7));
+console.log(rangeBetween(4, 7));
+console.log(rangeBetween(-4, 7));
