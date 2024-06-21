@@ -6,6 +6,7 @@
  * @returns {Function} - A new debounced function
  */
 
+//the 1st way
 function debounce(func, wait) {
   let timeout;
 
@@ -19,6 +20,23 @@ function debounce(func, wait) {
 
     clearTimeout(timeout);
     timeout = setTimeout(later, wait);
+  };
+}
+
+const debounced = debounce((message) => {
+  console.log(message);
+}, 1000);
+
+debounced("a");
+setTimeout(() => debounced("b"), 200);
+setTimeout(() => debounced("c"), 500);
+
+//the 2nd way
+function debounce(func, ms) {
+  let timeout;
+  return function () {
+    clearTimeout(timeout);
+    timeout = setTimeout(() => func.apply(this, arguments), ms);
   };
 }
 
