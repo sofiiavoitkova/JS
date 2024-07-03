@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>DOM Access Example</title>
+  </head>
+  <body>
+    <div>Users:</div>
+    <ul>
+      <li>John</li>
+      <li>Pete</li>
+    </ul>
+
+    <script>
+      // Access the <div> DOM node
+      let div1 = document.body.firstElementChild;
+      let div2 = document.body.childNodes[1];
+      console.log(div1);
+      console.log(div2);
+
+      // Access the <ul> DOM node
+      let ul = document.body.lastElementChild;
+      console.log(ul);
+
+      // Access the second <li> (with Pete)
+      let li = document.body.lastElementChild.lastElementChild;
+      console.log(li);
+    </script>
+  </body>
+</html>
