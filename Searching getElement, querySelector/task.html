@@ -42,5 +42,32 @@
 
       <input type="submit" value="Search!" />
     </form>
+    <script>
+      // The table with id="age-table"
+      const ageTable = document.getElementById("age-table");
+      console.log(ageTable);
+
+      // All label elements inside that table (there should be 3 of them)
+      const labelsInAgeTable = ageTable.getElementsByTagName("label");
+      console.log(labelsInAgeTable);
+
+      // The first td in that table (with the word “Age”)
+      const firstTdInAgeTable = ageTable.querySelector("td");
+      console.log(firstTdInAgeTable);
+
+      // The form with name="search"
+      const searchForm = document.getElementsByName("search")[0];
+      console.log(searchForm);
+
+      // The first input in that form
+      const firstInputInSearchForm = searchForm.querySelector("input");
+      console.log(firstInputInSearchForm);
+
+      // The last input in that form
+      const inputsInSearchForm = searchForm.querySelectorAll("input");
+      const lastInputInSearchForm =
+        inputsInSearchForm[inputsInSearchForm.length - 1];
+      console.log(lastInputInSearchForm);
+    </script>
   </body>
 </html>
