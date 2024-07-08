@@ -16,12 +16,23 @@
 
       for (let link of links) {
         let href = link.getAttribute("href");
-        if (!href) continue;
 
-        if (!href.includes("://")) continue;
+        if (!href) {
+          console.log("Skipping link without href:", link);
+          continue;
+        }
 
-        if (href.startsWith("http://internal.com")) continue;
+        if (!href.includes("://")) {
+          console.log("Skipping non-external link:", href);
+          continue;
+        }
 
+        if (href.startsWith("http://internal.com")) {
+          console.log("Skipping internal link:", href);
+          continue;
+        }
+
+        console.log("Styling link:", href);
         link.style.color = "orange";
       }
     </script>
