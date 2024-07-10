@@ -18,21 +18,21 @@
         let href = link.getAttribute("href");
 
         if (!href) {
-          console.log("Skipping link without href:", link);
+          console.log("Skipped link without href:", link);
           continue;
         }
 
         if (!href.includes("://")) {
-          console.log("Skipping non-external link:", href);
+          console.log("Skipped non-external link:", href);
           continue;
         }
 
         if (href.startsWith("http://internal.com")) {
-          console.log("Skipping internal link:", href);
+          console.log("Skipped internal link:", href);
           continue;
         }
 
-        console.log("Styling link:", href);
+        console.log("Styled link:", href);
         link.style.color = "orange";
       }
     </script>
