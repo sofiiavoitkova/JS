@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Task 4</title>
+  </head>
+  <body>
+    <script>
+      let ul = document.createElement("ul");
+      document.body.append(ul);
+
+      while (true) {
+        let userInput = prompt("Enter the text", "");
+        let li = document.createElement("li");
+        li.textContent = userInput;
+        ul.append(li);
+      }
+    </script>
+  </body>
+</html>
