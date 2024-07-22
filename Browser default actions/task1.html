@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Task 1</title>
+    <script>
+      function handler(event) {
+        console.log("It works");
+        event.preventDefault();
+      }
+    </script>
+  </head>
+  <body>
+    <a href="https://w3.org" onclick="handler(event); return false;"
+      >the browser will not go to w3.org</a
+    >
+  </body>
+</html>
