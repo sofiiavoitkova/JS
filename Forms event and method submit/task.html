@@ -29,6 +29,7 @@
         width: 100%;
         height: 100%;
         text-align: center;
+        display: none;
       }
 
       #prompt-form-container:before {
@@ -47,6 +48,9 @@
   </head>
 
   <body>
+    <h2>Click the button below</h2>
+
+    <input type="button" value="Click to show the form" id="show-button" />
     <div id="prompt-form-container">
       <form id="prompt-form">
         <div id="prompt-message">Enter something... <br />Please..</div>
@@ -55,5 +59,61 @@
         <input type="button" name="cancel" value="Cancel" />
       </form>
     </div>
+    <script>
+      function showPrompt(html, callback) {
+        const container = document.getElementById("prompt-form-container");
+        const form = document.getElementById("prompt-form");
+        const message = document.getElementById("prompt-message");
+        const inputField = form.elements["text"];
+        const cancelButton = form.elements["cancel"];
+
+        message.innerHTML = html;
+
+        container.style.display = "block";
+
+        inputField.focus();
+
+        function cleanup() {
+          container.style.display = "none";
+          form.removeEventListener("submit", submit);
+          cancelButton.removeEventListener("click", cancel);
+          document.removeEventListener("keydown", keyDown);
+        }
+
+        function submit(event) {
+          event.preventDefault();
+          callback(inputField.value);
+          cleanup();
+        }
+
+        function cancel() {
+          callback(null);
+          cleanup();
+        }
+
+        function keyDown(event) {
+          if (event.key === "Escape") {
+            callback(null);
+            cleanup();
+          }
+        }
+
+        form.addEventListener("submit", submit);
+        cancelButton.addEventListener("click", cancel);
+        document.addEventListener("keydown", keyDown);
+      }
+
+      document
+        .getElementById("show-button")
+        .addEventListener("click", function () {
+          showPrompt("Enter something... <br />Please..", function (value) {
+            if (value !== null) {
+              alert("You entered: " + value);
+            } else {
+              alert("You cancelled");
+            }
+          });
+        });
+    </script>
   </body>
 </html>
